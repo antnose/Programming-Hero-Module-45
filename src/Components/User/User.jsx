@@ -14,8 +14,10 @@
 // export default User;
 
 // With css or response (Using chatgpt)
+import { Link } from "react-router-dom";
+
 const User = ({ user }) => {
-  const { name, email, phone, website } = user;
+  const { name, email, phone, website, id } = user;
 
   return (
     <div className="bg-gray-800 rounded-2xl p-6 shadow-lg transform transition-all duration-300 hover:scale-105">
@@ -37,6 +39,12 @@ const User = ({ user }) => {
           {website}
         </a>
       </p>
+      <Link
+        to={`/user/${id}`}
+        className="mt-3 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
+      >
+        Show details
+      </Link>
     </div>
   );
 };
