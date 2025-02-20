@@ -1,3 +1,16 @@
 nav a {
   margin: 20px;
 }
+
+nav a.active {
+  text-decoration: underline;
+  color: #1e3a8a; /* Dark blue color */
+  font-weight: bold;
+  padding: 0px 10px; /* Adds padding around the active link */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+nav a.active:hover {
+  color: #4f46e5; /* Slightly darker blue on hover */
+  background-color: #c7d2fe; /* Lighter blue on hover */
+}
