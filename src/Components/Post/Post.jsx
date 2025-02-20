@@ -1,7 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Post = ({ post }) => {
   const { id, title } = post;
+
+  const navigate = useNavigate();
+  const handleShowDetails = () => {
+    navigate(`/post/${id}`);
+  };
 
   return (
     <div className="p-4 bg-gray-800 rounded-lg shadow-md border border-gray-700 hover:shadow-xl transition-all duration-300">
